@@ -160,6 +160,7 @@ class _EditarTareaState extends State<EditarTarea> {
                       color: Color.fromRGBO(20, 20, 100, 0.05),
                       borderRadius: BorderRadius.circular(20)),
                   child: TextField(
+                    maxLength: 100,
                     controller: _controllerTitulo,
                     decoration: InputDecoration(
                         errorText: bandera2 ? 'Datos incorrectos' : null,
@@ -194,6 +195,7 @@ class _EditarTareaState extends State<EditarTarea> {
                       color: Color.fromRGBO(20, 20, 100, .05),
                       borderRadius: BorderRadius.circular(20)),
                   child: TextField(
+                    maxLength: 500,
                     controller: _controllerDescripcion,
                     maxLines: 10,
                     decoration: InputDecoration(

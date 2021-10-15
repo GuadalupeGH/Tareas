@@ -76,32 +76,34 @@ class _FormularioTareaState extends State<FormularioTarea> {
                       color: Color.fromRGBO(20, 20, 100, 0.05),
                       borderRadius: BorderRadius.circular(20)),
                   child: TextField(
+                    maxLength: 100,
                     controller: _controllerTitulo,
                     decoration: InputDecoration(
-                        errorText: bandera1 ? 'Datos incorrectos' : null,
-                        focusColor: Color.fromRGBO(147, 37, 255, 0),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
-                                color: Color.fromRGBO(147, 37, 255, 0),
-                                width: 0)),
-                        label: Text.rich(TextSpan(children: <InlineSpan>[
-                          WidgetSpan(
-                            child: Text(
-                              'Titulo',
-                              style: TextStyle(
-                                  color: Color.fromRGBO(
-                                      106, 106, 106, 0.8666666666666667),
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 15),
-                            ),
+                      errorText: bandera1 ? 'Datos incorrectos' : null,
+                      focusColor: Color.fromRGBO(147, 37, 255, 0),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(147, 37, 255, 0),
+                              width: 0)),
+                      label: Text.rich(TextSpan(children: <InlineSpan>[
+                        WidgetSpan(
+                          child: Text(
+                            'Título',
+                            style: TextStyle(
+                                color: Color.fromRGBO(
+                                    106, 106, 106, 0.8666666666666667),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15),
                           ),
-                        ])),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
-                                width: 0,
-                                color: Color.fromRGBO(0, 0, 0, 0.1)))),
+                        ),
+                      ])),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(
+                            width: 0, color: Color.fromRGBO(0, 0, 0, 0.1)),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -110,6 +112,7 @@ class _FormularioTareaState extends State<FormularioTarea> {
                       color: Color.fromRGBO(20, 20, 100, .05),
                       borderRadius: BorderRadius.circular(20)),
                   child: TextField(
+                    maxLength: 500,
                     controller: _controllerDescripcion,
                     maxLines: 10,
                     decoration: InputDecoration(
@@ -123,7 +126,7 @@ class _FormularioTareaState extends State<FormularioTarea> {
                         label: Text.rich(TextSpan(children: <InlineSpan>[
                           WidgetSpan(
                             child: Text(
-                              'Descripcion',
+                              'Descripción',
                               style: TextStyle(
                                   color: Color.fromRGBO(
                                       106, 106, 106, 0.8666666666666667),
